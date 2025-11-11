@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Películas - UISEK</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c3e50;
+            text-align: center;
+            padding: 1.8rem 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border-bottom: 5px solid #3498db;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.6s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            background: #f8f9fa;
+            margin: 1rem 0;
+            padding: 1.2rem;
+            border-radius: 12px;
+            border-left: 6px solid #3498db;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        li:hover {
+            transform: translateX(8px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+            background: #eef5ff;
+        }
+        a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            color: #3498db;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+        .back:hover {
+            color: #3498db;
+        }
+        p {
+            line-height: 1.7;
+            margin: 0.8rem 0;
+        }
+        strong {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Películas</h1>
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

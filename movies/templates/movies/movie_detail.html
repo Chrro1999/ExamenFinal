@@ -1,0 +1,12 @@
+{% extends 'movies/base.html' %}
+
+{% block content %}
+<h2>{{ movie.title }} ({{ movie.year }})</h2>
+
+<p><strong>Género:</strong> {{ movie.genre }}</p>
+<p><strong>Director:</strong> {{ movie.director }}</p>
+<p><strong>Sinopsis:</strong></p>
+<p>{{ movie.synopsis|linebreaks }}</p>
+
+<a href="{% url 'movie_list' %}" class="back-link">← Volver al listado</a>
+{% endblock %}
