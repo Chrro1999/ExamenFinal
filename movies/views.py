@@ -1,5 +1,7 @@
+from rest_frmaework import viewsets, filters, status
+from rest_framewor
 from django.shortcuts import render
-from .models import Movie
+from .models import Movie, Director
 
 def movie_list(request):
     movies = Movie.objects.all()
